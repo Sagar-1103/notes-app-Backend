@@ -8,6 +8,10 @@ const port = process.env.PORT;
 app.use(cors());
 app.use(express.json());
 
+app.get("/",(req,res)=>{
+  res.status(200).json({"message":"success"});
+})
+
 //Routes
 app.use("/api/auth",require("./routes/auth"));
 app.use("/api/notes",require("./routes/notes"));

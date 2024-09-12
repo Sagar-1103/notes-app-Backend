@@ -1,0 +1,8 @@
+version: '3.1'
+services:
+  node:
+    image: node
+    environment:
+      JWT_SECRET: root
+      MONGO_URI: example
+      PORT: 5000
